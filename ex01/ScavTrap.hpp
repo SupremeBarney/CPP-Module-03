@@ -9,10 +9,12 @@ private:
 public:
 	ScavTrap();
 	ScavTrap( const std::string n );
+	ScavTrap( const ScavTrap& cpy );
 	~ScavTrap();
 
-	void	guardGate();
-	void	attack( std::string& target );
+	ScavTrap&	operator=( const ScavTrap& src );
+	void		guardGate();
+	void		attack( const std::string& target );
 };
 
 #endif
